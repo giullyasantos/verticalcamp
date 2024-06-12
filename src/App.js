@@ -21,7 +21,7 @@ function App() {
       <body>
         <section className='home-page'>
 	  <a><h3>Pine Lake Retreat</h3></a>
-          <h2>Welcome to Vertical Camp 2024!</h2>
+          <h2>WELCOME TO<br/>VERTICAL CAMP<br/>2024!</h2>
 	  <p>Embark on a transformative journey on this  3-night retreat designed to deepen your faith and foster lasting connections. Come and be a part of our vibrant Christian community where faith and fellowship flourish.</p>
 	  <div className='photo-slider'>
 	    <div className='slide-track'>

@@ -8,6 +8,7 @@
 }
 
 
+
 /*NAV BAR*/
 
 nav {
@@ -141,7 +142,6 @@ nav {
 } 
 /*PHOTO SLIDER ENDS*/
 
-
 /*GENERAL SETTINGS*/
 body{
   background-image: url('./images/backgroundmobile.PNG');
@@ -150,7 +150,7 @@ body{
   h1, h2 {
     color: #fbdd00;
     font-size: 2em;
-   
+    padding: 10px;
   }
 
   p, h3{
@@ -163,12 +163,18 @@ h1, h2, h3, nav li{
   letter-spacing: 1px;
 }
 
+h1, h2{
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+
 section{
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   height: 100vh;
+  margin-bottom: 5em;
 }
 
 .logo, a{
@@ -176,6 +182,16 @@ section{
 }
 
 /*GENERAL SETTINGS ENDS*/
+
+/*HOME*/
+
+.home-page{
+  margin-top: 5em;
+}
+
+.home-page p{
+  width: 30%;
+}
 
 /*THEME NIGHTS*/
 .night{
@@ -231,7 +247,37 @@ section{
 }
 
 /*PHONE ADJUSTMENT*/
+
+@media (max-width: 1024px) {
+  .home-page p{
+    width: 65%;
+  }
+}
+
 @media (max-width: 768px) {
+  h3{
+    font-size: 0.85em;
+  }
+
+  .topbar .logo img{
+     height: 3em;
+  }
+
+  .photo-slider{
+    height: auto;
+  }
+
+  .slide-track {
+    width: calc(150px * 20);
+  }
+
+  .slide {
+    width: 150px;
+  } 
+
+  body h1, body h2{
+    font-size: 1.5em;
+  }
   .sidebar {
     width: 70vw;
     transform: translateX(-70vw); /* Initially hidden */
@@ -242,6 +288,9 @@ section{
     width: 7em;
   }
 
-
+  .home-page p{
+    width: 80%;
+    font-size: 0.85em;
+  }
 }
 
