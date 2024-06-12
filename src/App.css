@@ -1,38 +1,247 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@keyframes scroll {
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(calc(-250px * 10));
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+/*NAV BAR*/
+
+nav {
+  position: relative; /* To position the sidebar relative to the nav */
+  button{
+    background-color: transparent;
+    border: none;
+  }
+  
+  ul{
+    margin-left: 20%;
+    width: 60%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;   
+    gap: 3em;
+
+    li{
+       list-style-type: none;
+      a{
+        font-size: 1.5em;
+        color: #34354b;
+        text-decoration: none;
+      }
+    }
+
+    a:hover{
+      color: white;
+    }
+
+    img{ 
+      width: 10em;
+      margin-top: 3em;
+      margin-bottom: 3em;
+    }
+  }
+}
+
+.sidebar {
+  background-color: #fbdd00;
+  width: 50vw;
+  height: 100vh;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  transition: transform 500ms ease;
+  transform: translateX(-50vw); /* Initially hidden */
+  z-index: 10; /* Ensure sidebar is above other content */
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.sidebar-toggle{
+  margin-top: 30px;
+  margin-left: 30px;
+  transition: 400ms ease;
+  cursor: pointer;
+}
+
+.sidebar-toggle:hover, .logo:hover{
+  opacity: 50%;
+}
+
+.close-sidebar-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none; 
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer; 
+}
+
+.topbar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo{
+     position: absolute; 
+     top: 50%; 
+     left: 50%;
+     transform: translate(-50%, -50%);
+     cursor: pointer;
+    img{
+      margin-top: 30px; 
+      height: 3.5em;
+      transform: rotate(10deg);
+    }
+  }
+
+}
+/*NAV BAR ENDS*/
+
+
+/*PHOTO SLIDER*/
+.photo-slider {
+    display: grid;
+    height: 300px;
+    overflow: hidden;
+    place-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.slide-track {
+    animation: scroll 40s linear infinite;
+    display: flex;
+    width: calc(250px * 20);
+}
+
+.slide {
+    align-items: center;
+    display: flex;
+    height: 200px;
+    justify-content: column;
+    padding: 15px;
+    position: relative;
+    width: 250px;
+    padding: 10px;
+
+    img {
+      border-radius: 7px;
+      cursor: default;
+      transition: opacity .4s ease;
+      width: 100%;
+   }
+} 
+/*PHOTO SLIDER ENDS*/
+
+
+/*GENERAL SETTINGS*/
+body{
+  background-image: url('./images/backgroundmobile.PNG');
+  background-size: contain;
+  overflow-x: hidden;
+  h1, h2 {
+    color: #fbdd00;
+    font-size: 2em;
+   
+  }
+
+  p, h3{
+    color: white;
+  }
+}
+
+h1, h2, h3, nav li{
+  font-family:"peckham-press";
+  letter-spacing: 1px;
+}
+
+section{
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.logo, a{
+  transition: 400ms ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+/*GENERAL SETTINGS ENDS*/
+
+/*THEME NIGHTS*/
+.night{
+  display: flex;
+  width: 70%;
+  margin-top: 3em;
+  img{
+    border-radius: 25px;
   }
 }
+
+.night-info{
+  display: flex;  
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 3em;
+}
+
+.opposite{
+  text-align: right;
+  margin-left: 0em;
+  margin-right: 3em;
+}
+/*THEME NIGHTS ENDS*/
+
+/*WHAT TO BRING*/
+
+.items{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.items ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  padding: 0;
+
+  li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 25px;
+    height: 10em;
+    width: 10em;
+    font-family:"alfarn";
+    background-color: #fbdd00;
+  }
+}
+
+/*PHONE ADJUSTMENT*/
+@media (max-width: 768px) {
+  .sidebar {
+    width: 70vw;
+    transform: translateX(-70vw); /* Initially hidden */
+  }
+
+  .items ul li{
+    height: 7em;
+    width: 7em;
+  }
+
+
+}
+
