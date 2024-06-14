@@ -7,6 +7,9 @@
   }
 }
 
+.App{
+  scroll-behavior: smooth;
+}
 
 
 /*NAV BAR*/
@@ -56,7 +59,7 @@ nav {
   left: 0;
   transition: transform 500ms ease;
   transform: translateX(-50vw); /* Initially hidden */
-  z-index: 10; /* Ensure sidebar is above other content */
+  z-index: 200; /* Ensure sidebar is above other content */
 }
 
 .sidebar.open {
@@ -89,13 +92,20 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  position: fixed; 
+  top: 0; 
+  width: 100%; 
+  z-index: 100;
 
   .logo{
-     position: absolute; 
-     top: 50%; 
-     left: 50%;
-     transform: translate(-50%, -50%);
-     cursor: pointer;
+    position: absolute;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
     img{
       margin-top: 30px; 
       height: 3.5em;
@@ -149,6 +159,7 @@ body{
   overflow-x: hidden;
   h1, h2 {
     color: #fbdd00;
+    opacity: 90%;
     font-size: 2em;
     padding: 10px;
   }
@@ -168,12 +179,17 @@ h1, h2{
   text-align: center;
 }
 
+p{
+  font-family: "paralucent-condensed";
+}
 
 section{
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  height: auto;
+  padding-top: 8em;
+  padding-bottom: 8em;
   margin-bottom: 5em;
 }
 
@@ -186,20 +202,49 @@ section{
 /*HOME*/
 
 .home-page{
-  margin-top: 5em;
+ padding-top: 9.5em;
 }
 
 .home-page p{
   width: 30%;
 }
 
+.location {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.home-page a{
+  text-decoration: none;
+}
+
+.home-page a h3, .home-page a svg {
+  transform: 400ms ease;
+}
+
+.home-page a:hover h3, .home-page a:hover svg {
+  opacity: 80%;
+}
+
 /*THEME NIGHTS*/
+#description{
+  width: 35%;
+}
+
 .night{
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 70%;
   margin-top: 3em;
   img{
     border-radius: 25px;
+    height: 150px;
+  }
+  h3{
+    color: #fbdd00;
+    opacity: 90%;
   }
 }
 
@@ -208,18 +253,19 @@ section{
   flex-direction: column;
   justify-content: center;
   margin-left: 3em;
+  width: 400px;
 }
 
 .opposite{
   text-align: right;
-  margin-left: 0em;
+  margin-left: 0em !important;
   margin-right: 3em;
 }
 /*THEME NIGHTS ENDS*/
 
 /*WHAT TO BRING*/
-
 .items{
+  margin-top: 2em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -245,6 +291,14 @@ section{
     background-color: #fbdd00;
   }
 }
+/*WHAT TO BRING ENDS*/
+
+/*SAME SETTINGS*/
+.theme-nights h2, .what-to-bring h2, .our-info-pay h2{
+  margin-bottom: 0;
+}
+
+/*SAME SETTINGS ENDS*/
 
 /*PHONE ADJUSTMENT*/
 
@@ -288,9 +342,38 @@ section{
     width: 7em;
   }
 
-  .home-page p{
+  .home-page p, .what-to-bring p, .our-info-pay p, .contact p{
     width: 80%;
     font-size: 0.85em;
   }
+
+  #description{
+    width: 85%;
+    font-size: 0.85em;
+    text-align: center;
+  }
+
+  .night{
+    width: 90%;
+    margin-top: 3em;
+    img{
+      height: 130px;
+    }
+  }
+
+  .night-info{
+    margin-left: 3em;
+    width: 400px;
+   
+    p{
+      font-size: 0.85em;
+      width: 100%;
+    }
+  }
+
+  .theme-nights, .our-info-pay, .contact{
+    padding-left: 17px;
+    padding-right: 17px;
+  } 
 }
 

@@ -1,7 +1,5 @@
-
-
-import React, { useState } from 'react';
-import '../App.css'; // Import the CSS
+import React, { useState, useEffect, useRef } from 'react';
+import '../App.css'; 
 import logo from '../images/logo.png';
 
 const Navbar = () => {
@@ -10,6 +8,24 @@ const Navbar = () => {
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
+
+  const [currentSection, setCurrentSection] = useState('home');
+  const sections = ['home', 'themedNights', 'whatToBring', 'howToJoin', 'contact'];
+
+  const sectionRefs = useRef(sections.map(() => React.createRef())); 
+
+  const handleClick = (section) => {
+    const target = sectionRefs.current.find((ref) => ref.current && ref.current.id === section);
+    if (target) {
+      const targetTop = target.current.offsetTop;
+      window.scrollTo({
+        top: targetTop,
+        behavior: 'smooth',
+      });
+      setCurrentSection(section);
+    }
+  };
+
 
   return (
     <nav>
@@ -23,19 +39,24 @@ const Navbar = () => {
       </div>
       <div className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
         <button onClick={toggleSidebar} className="close-sidebar-button">
-          × {/* Close icon */}
+          × 
         </button>
+        
         <ul>
           <div className='logo'><img src={logo} alt="Vertical Camp 2024 Logo"/></div>
-          <li><a href="/">Home</a></li>
-    	  <li><a href="/">Themed Nights</a></li>
-    	  <li><a href="/">What To Bring</a></li>
-    	  <li><a href="/">How To Join</a></li>
-    	  <li><a href="/">Contact</a></li>
-    	</ul>
+          {sections.map((section, index) => (
+            <li key={index}>
+              <a 
+                href={`#${section}`}
+                onClick={() => { handleClick(section); toggleSidebar(); }}
+                className={currentSection === section ? 'active' : ''}
+              >
+                {section.replace(/([A-Z])/g, ' $1').trim()} 
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
-
-      {/* Rest of your navbar content */}
     </nav>
   );
 };
