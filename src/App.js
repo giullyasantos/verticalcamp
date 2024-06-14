@@ -19,6 +19,17 @@ import Julina from './images/julina.png';
 import Costume from './images/costume.png';
 
 
+import Pay from './images/pay.png';
+import Communicate from './images/communicate.png';
+import Signup from './images/signup.png';
+
+import Instagram from './images/instagram.png';
+import Whatsapp from './images/whatsapp.png';
+
+import BibleChurch from './images/biblechurch white.png';
+
+
+
 function App() {
   return (
     <div className="App">
@@ -108,13 +119,13 @@ function App() {
             <img src={July4} alt="Pine Lake Retreat"/>
 	    <div className='night-info'>
               <h3>4th of july</h3>
-              <p>Embark on a transformative journey on this  3-night retreat designed to deepen your faith and foster lasting connections</p>
+              <p>Celebrate Independence Day with a spectacular fireworks display and patriotic festivities!</p>
 	    </div>
 	  </div>
           <div className='night'>
             <div className='night-info opposite'>
               <h3>Juline Party</h3>
-              <p>Embark on a transformative journey on this  3-night retreat designed to deepen your faith and foster lasting connections</p>
+              <p> Immerse yourself in the vibrant traditions of Brazil with delicious food, lively music, and festive dance!</p>
 	    </div>
             <img src={Julina} alt="Pine Lake Retreat"/>
 	  </div>
@@ -122,7 +133,7 @@ function App() {
             <img src={Costume} alt="Pine Lake Retreat"/>
 	    <div className='night-info'>
               <h3>Costume Party</h3>
-              <p>Embark on a transformative journey on this  3-night retreat designed to deepen your faith and foster lasting connections</p>
+              <p>Unleash your creativity and join us for an unforgettable night of imaginative costumes and exciting fun!</p>
 	    </div>
 	  </div>
 		
@@ -147,18 +158,43 @@ function App() {
         <section className='our-info-pay' id='howToJoin'>
           <h2>Ready to Join Us?!</h2>
           <p>We’re thrilled that you’re considering joining us for an unforgettable camp experience! Here’s how you can secure your spot:</p>
- 
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100"><path fill="white" d="M71.257,88.855h-14.31h-0.932H13.078V11.284h58.179v35.515l6.464-11.583V11.43c0-3.66-2.557-6.61-6.217-6.61  H12.809c-3.659,0-6.195,2.951-6.195,6.61v77.683c0,3.659,2.536,6.206,6.195,6.206h58.695c3.66,0,6.217-2.547,6.217-6.206V67.831  l-6.464,11.583V88.855z"/><rect x="18.619" y="21.442" fill="white" width="36.016" height="4.617"/><rect x="18.619" y="42.682" fill="white" width="36.016" height="4.617"/><rect x="18.619" y="32.523" fill="white" width="47.098" height="4.618"/><rect x="18.619" y="53.764" fill="white" width="47.098" height="4.617"/><rect x="18.619" y="63.922" fill="white" width="36.016" height="4.617"/><polygon fill="white" points="87.599,28.092 85.848,31.141 85.092,32.457 91.583,36.183 92.338,34.868 94.088,31.819 "/><polygon fill="white" points="60.174,74.625 60.174,82.391 66.846,78.353 89.821,38.595 83.33,34.868 "/><polygon points="24.358,74.459 23.036,73.137 21.488,74.686 19.939,73.137 18.618,74.459 20.166,76.007 18.618,77.558 19.939,78.88   21.488,77.331 23.036,78.88 24.358,77.558 22.81,76.007 "/><g><rect x="18.589" y="80.521" width="36.077" height="1.87"/></g></svg>
-
+	  <div className= 'steps-to-join'>
+	    <img src={Signup} alt="Sign Up To Vertical Camp 2024"/>
+            <div>
+              <h3>sign up</h3>
+              <p>Complete the <a style={{textDecoration: 'underline', color: '#fbdd00'}}>Google Form</a> to register. If you are under 18, please have a parent complete the form. </p>
+            </div>
+          </div>
+	  <div className= 'steps-to-join'>
+	    <img src={Pay} alt="Pay with Zelle Vertical Camp 2024"/>
+            <div>
+              <h3>make payment</h3>
+              <p>Send a payment of $175 through  <a style={{textDecoration: 'underline', color: '#fbdd00'}}>Zelle to (407) 813-3750.</a> This fee includes food, all three nights of stay, and activities. Please make sure to include your name and Vertical Camp. Ex: Joe Smith, Vertical Camp 2024 </p>
+            </div>
+          </div>
+	  <div className= 'steps-to-join'>
+	    <img src={Communicate} alt="Join Meeting For Vertical Camp 2024"/>
+            <div>
+              <h3>participate at mandatory meeting</h3>
+              <p>We’re thrilled that you’re considering joining us for an unforgettable camp experience! Here’s how you can secure your spot:</p>
+            </div>
+          </div>
 	</section>
         <section className='contact' id='contact'>
           <h2>have any questions?</h2>
-          <p>Have questions or need assistance? We’re here to help! Reach out to us at [Phone Number]</p>
-          <p>Don’t miss out on this incredible adventure. Secure your spot today and get ready for the best summer ever!</p>
+          <p>We’re here to help!Don’t miss out on this incredible adventure. Secure your spot today and get ready for the best summer ever! Reach out to us: </p>
+          <a><div className='reach-out'>
+	    <img src={Instagram} alt="Join Meeting For Vertical Camp 2024"/>
+            <h3>@_thevertical</h3>
+	  </div></a>
+          <a><div className='reach-out'>
+	    <img src={Whatsapp} alt="Join Meeting For Vertical Camp 2024"/>
+            <h3>321 367-5987</h3>
+	  </div></a>
         </section>
-  
       <footer>
-
+        <h3>An Event Led and Served by:</h3>
+        <img id='bible-church' src={BibleChurch} alt="Join Meeting For Vertical Camp 2024"/>
       </footer>
     </div>
   );

@@ -266,6 +266,7 @@ section{
 /*WHAT TO BRING*/
 .items{
   margin-top: 2em;
+  width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -293,18 +294,64 @@ section{
 }
 /*WHAT TO BRING ENDS*/
 
+/*READY TO JOIN*/
+.steps-to-join{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3em;
+  width: 40%;
+
+  img{ object-fit: contain; width: 8em; }
+  h3{ color: #fbdd00; font-size: 1.1em;}
+  div{ margin-left: 1em; p{ font-size: 1em;}} 
+}
+/*READY TO JOIN ENDS*/
+
+/*CONTACT*/
+.reach-out{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-top: 3em;
+  width: 280px;
+
+  img{ object-fit: contain; width: 3em; }
+  h3{ margin-left: 1em; font-size: 1.17em;}
+}
+/*CONTACT ENDS*/
+
 /*SAME SETTINGS*/
 .theme-nights h2, .what-to-bring h2, .our-info-pay h2{
   margin-bottom: 0;
 }
 
 /*SAME SETTINGS ENDS*/
+footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+  background-color: rgba(52, 53, 75, 0.75);
+
+  h3{ letter-spacing: 1.5px; font-size: 0.75em;}
+}
+
+#bible-church{
+  margin-top: 1em;
+  width: 10em;
+}
 
 /*PHONE ADJUSTMENT*/
 
 @media (max-width: 1024px) {
-  .home-page p{
+  .home-page p,{
     width: 65%;
+  }
+
+  .steps-to-join{
+    width: 60%;
   }
 }
 
@@ -375,5 +422,17 @@ section{
     padding-left: 17px;
     padding-right: 17px;
   } 
+
+  .steps-to-join{
+    height: 5em;
+    margin-top: 3em;
+    width: 90%;
+
+
+    img{ margin-left: 1.5em; width: 6em; }
+    h3{ font-size: 0.7em;}
+    div{ p{ font-size: 0.7em;}}
+  
+  }
 }
 
