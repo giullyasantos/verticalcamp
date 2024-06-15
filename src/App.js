@@ -162,7 +162,7 @@ function App() {
 	    <img src={Signup} alt="Sign Up To Vertical Camp 2024"/>
             <div>
               <h3>sign up</h3>
-              <p>Complete the <a style={{textDecoration: 'underline', color: '#fbdd00'}}>Google Form</a> to register. If you are under 18, please have a parent complete the form. </p>
+              <p>Complete the <a href='https://docs.google.com/forms/d/e/1FAIpQLSdOvSX3iUhtdD0HPQA47M9B63I2ZQAyi98PuGzadXtn17i7ng/viewform' style={{textDecoration: 'underline', color: '#fbdd00'}}>Google Form</a> to register. If you are under 18, please have a parent complete the form. </p>
             </div>
           </div>
 	  <div className= 'steps-to-join'>
@@ -176,7 +176,7 @@ function App() {
 	    <img src={Communicate} alt="Join Meeting For Vertical Camp 2024"/>
             <div>
               <h3>participate at mandatory meeting</h3>
-              <p>We’re thrilled that you’re considering joining us for an unforgettable camp experience! Here’s how you can secure your spot:</p>
+              <p>The date of the meeting is to be decided, but we will discuss all the information about the camp, including travel arrangements and other important details.</p>
             </div>
           </div>
 	</section>
@@ -189,7 +189,7 @@ function App() {
 	  </div></a>
           <a><div className='reach-out'>
 	    <img src={Whatsapp} alt="Join Meeting For Vertical Camp 2024"/>
-            <h3>321 367-5987</h3>
+            <h3>(407) 813-3750</h3>
 	  </div></a>
         </section>
       <footer>
